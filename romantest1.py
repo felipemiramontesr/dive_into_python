@@ -71,10 +71,5 @@ class ToRomanBadInput(unittest.TestCase):
         '''to_roman should fail with large input'''
         self.assertRaises(roman1.OutOfRangeError, roman1.to_roman, 4000)  
 
-roman1.to_roman(4000)
-roman1.to_roman(5000)
-roman1.to_roman(9000)
-
-
 if __name__ == '__main__':
     unittest.main()
