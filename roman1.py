@@ -26,3 +26,6 @@ def to_roman(n):
     
 
     return result
+    
+class OutOfRangeError(ValueError):  
+    pass   
