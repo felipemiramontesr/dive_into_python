@@ -34,11 +34,13 @@ def from_roman(s):
         while s[index:index+len(numeral)] == numeral:  
             result += integer
             index += len(numeral)
-            print('found', numeral, 'of length', len(numeral), ', adding', integer)
     return result	
 
 class OutOfRangeError(ValueError):  
     pass   
 
 class NotIntegerError(ValueError): 
+	pass
+
+class InvalidRomanNumeralError(ValueError): 
 	pass
