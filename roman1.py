@@ -26,7 +26,19 @@ def to_roman(n):
             n -= integer
     return result
 
+def from_roman(s):
+    """convert Roman numeral to integer"""
+    result = 0
+    index = 0
+    for numeral, integer in roman_numeral_map:
+        while s[index:index+len(numeral)] == numeral:  
+            result += integer
+            index += len(numeral)
+            print('found', numeral, 'of length', len(numeral), ', adding', integer)
+    return result	
+
 class OutOfRangeError(ValueError):  
     pass   
+
 class NotIntegerError(ValueError): 
 	pass
